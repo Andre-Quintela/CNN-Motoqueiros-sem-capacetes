@@ -5,8 +5,6 @@ Descrição
 
 Conteúdo deste repositório
 - `CNN_ValidacaoCapacete.ipynb` — Notebook principal com todo o fluxo: carregamento dos dados, pré-processamento, definição da CNN, treinamento, validação e inferência.
-- `yolov8n.pt` — Modelo pretreinado (se aplicável para etapas de detecção). Pode ser usado para comparação ou como backbone/auxílio.
-- `HelmetViolationsV2/` — Dataset em formato YOLO-like (pastas `train/`, `valid/`, `test/` com `images/` e `labels/`).
 
 Objetivo
 - Documentar como executar o notebook localmente, quais dependências instalar e onde ajustar caminhos de dados. O notebook realiza experimento de treino/validação de uma CNN para classificar/validar capacete em imagens.
@@ -42,30 +40,7 @@ python train.py --data "HelmetViolationsV2/data.yaml" --epochs 50
 ```
 (Ajuste flags conforme o seu script.)
 
-Inferência
-- No notebook há células de inferência que carregam um checkpoint salvo e executam predições sobre imagens de `test/`. Altere o caminho do checkpoint se necessário.
-
-Estrutura de saída esperada
-- Checkpoints/modelos salvos (se o notebook contiver esse passo), métricas de treino/validação e gráficos de perda/precisão.
-
-Boas práticas
-- Use GPU se disponível (instale versão de `torch` compatível com sua CUDA).
-- Faça backup dos checkpoints regularmente.
-- Mantenha `data.yaml` e as anotações sincronizados com as imagens.
-
 Possíveis melhorias
 - Separar código em scripts `train.py`, `eval.py`, `infer.py` para execução mais robusta.
 - Implementar logging (TensorBoard ou Weights & Biases).
 - Adicionar pipeline de augmentations (albumentations).
-
-Contribuição
-- Para mudanças no notebook, comente as alterações diretamente nas células e envie um pull request com uma breve descrição.
-
-Contato
-- Se precisar que eu gere um `train.py` a partir do notebook, crie um pedido e eu converto as células principais para um script executável.
-
-Licença
-- Adicione aqui a licença desejada (ex.: MIT) ou mantenha a licença do seu repositório.
-
-----
-Observação rápida: verifique se o notebook referido no seu workspace é `CNN_ValidacaoCapacete.ipynb` (há uma cópia em `Downloads` chamada `CNN_ValidacaoCapacete_(1).ipynb`). Use o arquivo correto ao abrir o notebook.
