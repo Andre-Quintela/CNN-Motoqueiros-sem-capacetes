@@ -1,4 +1,4 @@
-# Validação de Capacete (CNN)
+# Validação de uso de capacete (CNN)
 
 Descrição
 -	Projeto em notebook contendo uma Convolutional Neural Network (CNN) para validação de uso de capacete em imagens (detecção/classificação), acompanhado de um conjunto de dados local `HelmetViolationsV2`.
